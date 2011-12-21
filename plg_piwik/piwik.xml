@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>System - Piwik</name>
+	<author>Fredrik Åström</author>
+	<creationDate>Dec 2008</creationDate>
+	<copyright>Copyright (C) 2008 Fredrik Åström. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>fredrik@lagun.se</authorEmail>
+	<authorUrl>www.gt-r.nu</authorUrl>
+	<version>0.0.1</version>
+	<description>This Plugin adds the Tracking Code for Piwik Analytics into your site.</description>
+	<files>
+		<filename plugin="piwik">piwik.php</filename>
+	</files>
+	<config>
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="piwik_site_id" type="text" default=""	label="Site ID" description="This is the Piwik Site ID. Check your Piwik settings to find out wich Site ID to use" />
+			<field name="piwik_http_url" type="text" default="" label="Piwik HTTP URL" description="Insert the HTTP URL to your Piwik installation here. http://www.example.com/piwik/ IMPORTANT! Do NOT forget the trailing slash (/) in the URL" />
+			<field name="piwik_https_url" type="text" default="" label="Piwik HTTPS URL" description="Insert the HTTPS URL to your Piwik installation here. https://www.example.com/piwik/ IMPORTANT! Do NOT forget the trailing slash (/) in the URL" />
+		</fieldset>
+	</fields>
+	</config>
+	<params>
+		<param name="piwik_site_id" type="text" default="1" label="Site ID" description="This is the Piwik Site ID. Check your Piwik settings to find out wich Site ID to use" />
+		<param name="piwik_http_url" type="text" default="" label="Piwik HTTP URL" description="Leave it blank if you do not use piwik on another site. (Insert the HTTP URL to your Piwik installation here. http://www.example.com/piwik/ IMPORTANT! Do NOT forget the trailing slash (/) in the URL)" />
+		<param name="piwik_https_url" type="text" default="" label="Piwik HTTPS URL" description="Leave it blank if you do not use piwik on another site. (Insert the HTTPS URL to your Piwik installation here. https://www.example.com/piwik/ IMPORTANT! Do NOT forget the trailing slash (/) in the URL)" />
+	</params>
+</install>

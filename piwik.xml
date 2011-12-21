@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0" method="upgrade">
+	<name>Piwik</name>
+	  <creationDate>10 April 2011</creationDate>
+	  <author>Jerry</author>
+	  <copyright>This component is released under the GNU/GPL License</copyright>
+	  <authorEmail>jerry@artd.ch</authorEmail>
+	  <authorUrl>http://www.artd.ch</authorUrl>
+	  <version>4.0.2</version>
+	  <description>Piwik wrapper component for Joomla! backend. System Plugin by Fredrik Åström</description>
+	<files folder="site">
+		<filename>index.html</filename>
+	</files>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu>Piwik</menu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>admin.piwik.php</filename>
+			<filename>getjoomla.config.php</filename>
+			<filename>piwik.zip</filename>
+			<filename>extraction.php</filename>
+			<filename>index.html</filename>
+		</files>
+	</administration>
+	
+	<params />
+	<plugins>
+		<plugin plugin="piwik" group="system">
+			<files folder="plg_piwik">
+				<file>piwik.php</file>
+				<file>piwik.xml</file>
+			</files>
+			<media />
+		</plugin>
+	</plugins>
+	<check>
+		<directory>/plugins/system</directory>
+		<extension name="piwik" type="plugins" field="published" value="1">element='piwik'</extension>
+	</check>
+
+  <installfile>install.php</installfile>
+  <uninstallfile>uninstall.php</uninstallfile>
+</install>
